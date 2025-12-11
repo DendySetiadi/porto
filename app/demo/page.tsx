@@ -2,9 +2,15 @@
 
 import { useState } from 'react';
 
+type ResultType = {
+  preprocessed: string;
+  aspect: string;
+  sentiment: string;
+};
+
 export default function DemoPage() {
   const [text, setText] = useState('');
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState<ResultType | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -33,9 +39,7 @@ export default function DemoPage() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          data: [text]
-        }),
+        body: JSON.stringify({ data: [text] }),
       });
 
       if (!response.ok) {
@@ -43,7 +47,7 @@ export default function DemoPage() {
       }
 
       const data = await response.json();
-      
+
       // Gradio API returns: {data: [preprocessed, aspect, sentiment]}
       setResult({
         preprocessed: data.data[0],
@@ -58,7 +62,7 @@ export default function DemoPage() {
     }
   };
 
-  const getSentimentColor = (sentiment) => {
+  const getSentimentColor = (sentiment?: string) => {
     if (!sentiment) return 'text-gray-400';
     const s = sentiment.toLowerCase();
     if (s.includes('positif') || s.includes('positive')) return 'text-green-400';
@@ -66,7 +70,7 @@ export default function DemoPage() {
     return 'text-yellow-400';
   };
 
-  const getSentimentBadge = (sentiment) => {
+  const getSentimentBadge = (sentiment?: string) => {
     if (!sentiment) return 'bg-gray-500/20 text-gray-400';
     const s = sentiment.toLowerCase();
     if (s.includes('positif') || s.includes('positive')) return 'bg-green-500/20 text-green-400';
