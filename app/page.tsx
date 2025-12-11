@@ -3,11 +3,13 @@
 import { useState, useEffect } from 'react';
 
 export default function Home() {
-  type CertType = {
+  // Tambahkan tipe untuk sertifikat
+type CertType = {
   image: string;
   title: string;
 };
 
+// Ubah useState menjadi:
 const [selectedCert, setSelectedCert] = useState<CertType | null>(null);
 
   const [visibleSections, setVisibleSections] = useState(new Set());
