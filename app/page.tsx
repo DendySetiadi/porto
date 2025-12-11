@@ -1,20 +1,25 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
-type CertType = {
+export default function Home() {
+  type CertType = {
   image: string;
   title: string;
 };
 
 const [selectedCert, setSelectedCert] = useState<CertType | null>(null);
 
-export default function Home() {
-  const [selectedCert, setSelectedCert] = useState<CertType | null>(null);
   const [visibleSections, setVisibleSections] = useState(new Set());
   const [isLoading, setIsLoading] = useState(true);
 
-  const certificates: CertType[] = [
+  const projects = [
+    { title: "ABSA Indonesian National Football Team's", desc: "Aspect-Based Sentiment Analysis on the Indonesian National Football Team's Instagram comments using the Naive Bayes algorithm.", link: "/demo" },
+    { title: "Frontend Application", desc: "A mobile application for car rental services built using Android Studio, Java, and Firebase for real-time data management and authentication.", link: "https://github.com/DendySetiadi/Cartogo2" },
+    { title: "Todo ListWeb", desc: "A clean and minimal To-Do List web application designed to help users organize and track their daily tasks with ease.", link: "https://revou-coding-camp.github.io/codingcamp-18-aug-25-DendySetiadi/" },
+  ];
+
+  const certificates = [
     {
       image: "/certificate1.png",
       title: "Penulis Paper 'Aspect-Based Sentiment Analysis of Indonesian Football Team's Instagram Comments using Naive Bayes.'"
@@ -28,7 +33,7 @@ export default function Home() {
       title: "SAP Overview (SAP University Partnership, 2025): Pengenalan SAP"
     }
   ];
- 
+
   useEffect(() => {
     // Loading screen timer
     const timer = setTimeout(() => {
@@ -495,7 +500,7 @@ export default function Home() {
               {certificates.map((cert, index) => (
                 <div 
                   key={index}
-                  onClick={() => setSelectedCert({ image: cert.image, title: cert.title })}
+                  onClick={() => cert && setSelectedCert(cert)}
                   className="group relative overflow-hidden rounded-lg border border-white/10 hover:border-red-400/50 transition-all duration-300 cursor-pointer"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
