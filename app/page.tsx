@@ -7,6 +7,8 @@ type CertType = {
   title: string;
 };
 
+const [selectedCert, setSelectedCert] = useState<CertType | null>(null);
+
 export default function Home() {
   const [selectedCert, setSelectedCert] = useState<CertType | null>(null);
   const [visibleSections, setVisibleSections] = useState(new Set());
@@ -493,7 +495,7 @@ export default function Home() {
               {certificates.map((cert, index) => (
                 <div 
                   key={index}
-                  onClick={() => cert && setSelectedCert(cert)}
+                  onClick={() => setSelectedCert({ image: cert.image, title: cert.title })}
                   className="group relative overflow-hidden rounded-lg border border-white/10 hover:border-red-400/50 transition-all duration-300 cursor-pointer"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
