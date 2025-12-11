@@ -3,7 +3,13 @@
 import { useState, useEffect } from 'react';
 
 export default function Home() {
-  const [selectedCert, setSelectedCert] = useState(null);
+  type CertType = {
+  image: string;
+  title: string;
+};
+
+const [selectedCert, setSelectedCert] = useState<CertType | null>(null);
+
   const [visibleSections, setVisibleSections] = useState(new Set());
   const [isLoading, setIsLoading] = useState(true);
 
