@@ -387,49 +387,46 @@ const [selectedCert, setSelectedCert] = useState<CertType | null>(null);
       <section className="min-h-screen flex items-start justify-center px-10 bg-gradient-to-b from-[#0d0d0d] to-[#1a1a1a] pt-24">
         <div className="flex max-w-6xl w-full items-start gap-10 flex-col md:flex-row">
 
-          {/* FOTO-FOTO KIRI */}
-          <div className="relative w-full md:w-1/2 min-h-[28rem] flex justify-center md:justify-start animate-fadeInLeft">
+          
+<section className="min-h-screen flex flex-col md:flex-row items-center md:items-start justify-center px-6 md:px-10 bg-gradient-to-b from-[#0d0d0d] to-[#1a1a1a] pt-24">
+  {/* FOTO BESAR + KECIL */}
+  <div className="relative w-full md:w-1/2 flex justify-center md:justify-start">
+    <img
+      src="/foto3.jpg"
+      alt="Main Photo"
+      className="w-56 md:w-64 h-64 sm:h-72 md:h-[28rem] object-cover rounded-lg shadow-xl"
+    />
+    {/* FOTO KECIL 1 */}
+    <img
+      src="/foto1.jpg"
+      alt="Photo 1"
+      className="w-24 h-28 md:w-40 md:h-56 object-cover rounded-lg shadow-lg absolute top-0 right-4 md:right-6"
+    />
+    {/* FOTO KECIL 2 */}
+    <img
+      src="/foto2.jpg"
+      alt="Photo 2"
+      className="w-24 h-28 md:w-40 md:h-56 object-cover rounded-lg shadow-lg absolute bottom-0 right-4 md:right-6"
+    />
+  </div>
 
-            {/* FOTO BESAR */}
-            <img 
-              src="/foto3.jpg"
-              alt="Main Photo"
-              className="w-56 md:w-64 h-[22rem] md:h-[28rem] object-cover rounded-lg shadow-xl"
-            />
+  {/* TEKS HERO */}
+  <div className="w-full md:w-1/2 flex flex-col justify-center mt-8 md:mt-0 text-center md:text-left px-4 md:px-6 lg:px-12">
+    <h1 className="text-4xl sm:text-5xl md:text-5xl font-extrabold mb-4 text-white drop-shadow-lg leading-tight">
+      Gregorius Dendy Setiadi
+    </h1>
+    <p className="text-lg sm:text-xl md:text-2xl mb-6 text-gray-300 tracking-wide">
+      Machine Learning | Front End
+    </p>
+    <a
+      href="#projects"
+      className="px-6 py-3 bg-red-500 text-white hover:bg-red-600 rounded-lg shadow-lg transition-all duration-300 text-lg md:text-xl w-full sm:w-auto max-w-[220px] mx-auto md:mx-0"
+    >
+      See My Work
+    </a>
+  </div>
+</section>
 
-            {/* FOTO KECIL 1 — ATAS */}
-            <img 
-              src="/foto1.jpg"
-              alt="Photo 1"
-              className="w-28 h-32 object-cover absolute top-10 left-[60%] md:w-40 md:h-56 md:top-0 md:left-[50%] rounded-lg shadow-lg"
-              style={{ animationDelay: '0.2s' }}
-            />
-
-            {/* FOTO KECIL 2 — BAWAH */}
-            <img 
-              src="/foto2.jpg"
-              alt="Photo 2"
-              className="w-28 h-32 object-cover absolute bottom-10 left-[65%] md:w-40 md:h-56 md:bottom-0 md:left-[50%] rounded-lg shadow-lg"
-              style={{ animationDelay: '0.4s' }}
-            />
-
-          </div>
-
-           {/* TEKS + TOMBOL */}
-          <div className="w-full md:w-1/2 flex flex-col justify-center pl-0 md:pl-4 pt-10 md:pt-20 text-center md:text-left animate-fadeInRight">
-            <h1 className="text-4xl sm:text-5xl md:text-4xl font-extrabold mb-4 text-white drop-shadow-lg leading-tight">
-              Gregorius Dendy Setiadi
-            </h1>
-            <p className="text-lg sm:text-xl md:text-2xl mb-6 text-gray-300 tracking-wide">
-              Machine Learning | Front End
-            </p>
-            <a 
-              href="#projects" 
-              className="px-6 py-3 bg-red-500 text-white hover:bg-red-600 rounded-lg shadow-lg transition-all duration-300 text-lg md:text-xl w-max mx-auto md:mx-0"
-            >
-              See My Work
-            </a>
-          </div>
 
         </div>
       </section>
