@@ -3,13 +3,11 @@
 import { useState, useEffect } from 'react';
 
 export default function Home() {
-  // Tambahkan tipe untuk sertifikat
-type CertType = {
+  type CertType = {
   image: string;
   title: string;
 };
 
-// Ubah useState menjadi:
 const [selectedCert, setSelectedCert] = useState<CertType | null>(null);
 
   const [visibleSections, setVisibleSections] = useState(new Set());
@@ -502,7 +500,7 @@ const [selectedCert, setSelectedCert] = useState<CertType | null>(null);
               {certificates.map((cert, index) => (
                 <div 
                   key={index}
-                  onClick={() => setSelectedCert(cert)}
+                  onClick={() => cert && setSelectedCert(cert)}
                   className="group relative overflow-hidden rounded-lg border border-white/10 hover:border-red-400/50 transition-all duration-300 cursor-pointer"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
