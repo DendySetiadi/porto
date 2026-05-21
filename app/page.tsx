@@ -18,6 +18,7 @@ const [selectedCert, setSelectedCert] = useState<CertType | null>(null);
     { title: "ABSA Indonesian National Football Team's", desc: "Aspect-Based Sentiment Analysis on the Indonesian National Football Team's Instagram comments using the Naive Bayes algorithm.", link: "/demo" },
     { title: "Frontend Application", desc: "A mobile application for car rental services built using Android Studio, Java, and Firebase for real-time data management and authentication.", link: "https://github.com/DendySetiadi/Cartogo2" },
     { title: "Todo ListWeb", desc: "A clean and minimal To-Do List web application designed to help users organize and track their daily tasks with ease.", link: "https://revou-coding-camp.github.io/codingcamp-18-aug-25-DendySetiadi/" },
+    { title: "Sustainability Report PT Ancora Indonesia Resources Tbk 2025", desc: "Supported the preparation of the 2025 Sustainability Report of PT Ancora Indonesia Resources Tbk through ESG data processing and analysis, including data cleaning and validation, to ensure consistency and accuracy of information in the company’s sustainability reporting.", link: "https://www.ancorair.com/[id]/esg" },
   ];
 
   const certificates = [
@@ -619,7 +620,7 @@ const [selectedCert, setSelectedCert] = useState<CertType | null>(null);
       {/* FLOATING WHATSAPP BUTTON - SHOW AFTER LOADING */}
       {!isLoading && (
         <a
-          href="https://wa.me/6288216615880?text=Halo%20Dendy,%20saya%20tertarik%20dengan%20portfolio%20Anda!"
+          href="https://wa.me/628138343887?text=Halo%20Dendy,%20saya%20tertarik%20dengan%20portfolio%20Anda!"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-6 right-6 z-[60] group animate-fadeInContent"
