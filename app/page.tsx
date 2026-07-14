@@ -478,6 +478,14 @@ const [selectedCert, setSelectedCert] = useState<CertType | null>(null);
               <p className="text-gray-300">
                 "Aspect-Based Sentiment Analysis on the Indonesian National Football Team's Instagram Account Using the Naive Bayes Algorithm"
               </p>
+              <a
+               href="https://ieeexplore.ieee.org/document/11309508/metrics#metrics"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-red-400 hover:text-red-300 mt-2 inline-block"
+              >
+              Link →
+            </a>
             </div>
 
             <div className="mt-4 flex flex-wrap gap-2">
