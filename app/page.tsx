@@ -475,18 +475,15 @@ const [selectedCert, setSelectedCert] = useState<CertType | null>(null);
             
             <div className="mt-4 pt-4 border-t border-white/10">
               <p className="text-sm text-gray-400 mb-2 font-semibold">Thesis:</p>
-              <p className="text-gray-300">
-                "Aspect-Based Sentiment Analysis on the Indonesian National Football Team's Instagram Account Using the Naive Bayes Algorithm"
-              </p>
               <a
-               href="https://ieeexplore.ieee.org/document/11309508/metrics#metrics"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-red-400 hover:text-red-300 mt-2 inline-block"
-              >
-              Link →
-            </a>
-            </div>
+    href="https://ieeexplore.ieee.org/document/11309508/metrics#metrics"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-300 underline decoration-white/30"
+  >
+    "Aspect-Based Sentiment Analysis on the Indonesian National Football Team's Instagram Account Using the Naive Bayes Algorithm"
+  </a>
+</div>
 
             <div className="mt-4 flex flex-wrap gap-2">
               <span className="px-3 py-1 bg-red-500/10 text-red-400 rounded-lg text-sm border border-red-500/20">Machine Learning</span>
